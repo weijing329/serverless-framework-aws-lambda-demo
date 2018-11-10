@@ -15,6 +15,7 @@ module.exports.hello = async (event, context) => {
 
 module.exports.getSourceIp = async (event, context) => {
   return {
+    headers: { 'Access-Control-Allow-Origin': '*' },
     statusCode: 200,
     body: JSON.stringify({
       sourceIp: event.requestContext.identity.sourceIp,
