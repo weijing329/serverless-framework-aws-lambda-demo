@@ -61,7 +61,7 @@ Keep new user credentials **Access Key ID** & **Secret Access Key** handy for se
 $ serverless config credentials --provider aws --key <Access Key ID> --secret <Secret Access Key>
 ```
 
-## Setup AWS API Gateway  custom domain
+## Setup AWS API Gateway custom domain
 
 Configure API Gateway to use my own domain name for an API and Stage, also backed by an ACM certificate for HTTPS connection.
 
@@ -80,3 +80,7 @@ $ npm run deploy
 # or 
 $ sls deploy
 ```
+
+## Enable AWS API Gateway CORS for frontend local testing
+
+> This part, I configured through AWS console website. If details are required, I can provide screenshot.
