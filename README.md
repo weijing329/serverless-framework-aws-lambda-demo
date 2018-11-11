@@ -7,6 +7,8 @@ The backend service is a AWS lambda function developed with Node.js Serverless F
 Live Demo: https://api.weijing329.studio/demo/ip
 
 ## Backend Process Flow Diagram
+Backend lookup ISP information from two different source, because ip-api.com has more accurate Geo-location, ipstack.com provides country flag image.
+
 ```mermaid
 sequenceDiagram
 
@@ -17,7 +19,11 @@ participant S as ipstack.com
 
 F->>B: Fetch IP information 
 activate B
-B->>B: Prepare IP information
+B->>B: get sourceIp from requestContext
+B->>A: Lookup ISP information using sourceIp
+B->>S: Lookup ISP information using sourceIp
+A-->>B: ISP information
+S-->>B: ISP information
 B-->>F: Return IP information
 deactivate B
 
