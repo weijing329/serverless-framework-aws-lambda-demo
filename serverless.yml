@@ -32,8 +32,8 @@ functions:
       - http: ANY /hello
       - http: ANY /hello/{proxy+}
 
-  getSourceIp:
-    handler: handler.getSourceIp
+  getIpInfo:
+    handler: handler.getIpInfo
     events:
       - http: ANY /ip
       - http: ANY /ip/{proxy+}
