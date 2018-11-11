@@ -1,4 +1,4 @@
-# # Backend of IP detection service
+# Backend of IP detection service
 
 > This project is for demostrate setting up the backend of an user IP detection service on AWS serverless cloud environment. 
 
